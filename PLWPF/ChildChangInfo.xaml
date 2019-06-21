@@ -1,0 +1,82 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.ChildChangInfo"
+        mc:Ignorable="d"
+        Title="ChildChangInfo" Height="300" Width="300" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <CheckBox x:Name="checkAdd" Content="check if you want to add special need" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center"  Margin="10"  IsChecked="False"/>
+        <CheckBox x:Name="checkRemove" Content="check if you want to remove special need" HorizontalAlignment="Center"  Margin="10" Grid.Row="3" VerticalAlignment="Center"  IsChecked="False"/>
+        <Label Content="enter special need:" HorizontalAlignment="Center"  Margin="0" Grid.Row="4" VerticalAlignment="Top" />
+        <TextBox x:Name="TextBox" HorizontalAlignment="Center" Height="32" Margin="10,10,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Update child's special needs" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Grid x:Name="grid1" HorizontalAlignment="Center" Grid.Row="1"   >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Child Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="childIdComboBox" Grid.Column="1" DisplayMemberPath="ChildId" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+            </ComboBox>
+        </Grid>
+
+        <Grid HorizontalAlignment="Center"  Grid.Row="6" Width="292"    >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Add"  Margin="10" Click="Button_Click" FontSize="16" Background="#FF479736" Foreground="Black"  FontFamily="david" IsEnabled="{Binding IsChecked, ElementName=checkAdd}">
+                <Button.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=childIdComboBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=TextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Content="Remove" Grid.Column="1" Margin="10" FontSize="16" Background="#FF479736" Foreground="Black"  FontFamily="david" IsEnabled="{Binding IsChecked, ElementName=checkRemove}"  Click="Button_Click_1">
+                    <Button.Style>
+                        <Style>
+                            <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=childIdComboBox, Path=Text}" Value="">
+                                    <Setter Property="Button.IsEnabled" Value="false"/>
+                                </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=TextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.GrioupByDistance"
+        mc:Ignorable="d"
+        Title="GrioupByDistance" Height="300" Width="300" >
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="184*"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="distanceBox"  HorizontalAlignment="Center" Margin="10" Grid.Row="1"  Width="257" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="All Contracts With Distance by Choice:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <local:UserControlGrouping  x:Name="groupUser"  HorizontalAlignment="Center" Grid.Row="2"/>
+
+    </Grid>
+</Window>

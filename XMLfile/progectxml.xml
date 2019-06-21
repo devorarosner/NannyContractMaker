@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Program>
+  <Nanny>
+    <id>11</id>
+    <FirstName>devora</FirstName>
+    <LastName>cohan</LastName>
+    <PhoneNumber>0</PhoneNumber>
+    <Address>yafo, israel</Address>
+    <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>
+    <Floor>2</Floor>
+    <Elevator>true</Elevator>
+    <MaxAgeOfKid>30</MaxAgeOfKid>
+    <MaxNumberOfKids>3</MaxNumberOfKids>
+    <MinAgeOfKid>0</MinAgeOfKid>
+    <Experience>0</Experience>
+    <PaymentPerHour>0</PaymentPerHour>
+    <AllowsPaymentByHour>true</AllowsPaymentByHour>
+    <PaymentPermonth>0</PaymentPermonth>
+    <Vaction>false</Vaction>
+    <StartTime>8,8,-1,-1,-1,-1,</StartTime>
+    <EndTime>12,12,-1,-1,-1,-1,</EndTime>
+    <Days>1,1,0,0,0,0,</Days>
+    <Recommendations />
+  </Nanny>
+  <Mother>
+    <id>21</id>
+    <FirstName>devora</FirstName>
+    <LastName>rosner</LastName>
+    <PhoneNumber />
+    <Address>beit shemesh, israel</Address>
+    <Area>0</Area>
+    <Notes>hello</Notes>
+    <StartTime>8,-1,-1,-1,-1,-1,</StartTime>
+    <EndTime>12,-1,-1,-1,-1,-1,</EndTime>
+    <Days>1,0,0,0,0,0,</Days>
+  </Mother>
+  <Mother>
+    <id>22</id>
+    <FirstName>morya</FirstName>
+    <LastName>etinger</LastName>
+    <PhoneNumber />
+    <Address>yafo, israel</Address>
+    <Area>100000</Area>
+    <Notes>apple</Notes>
+    <StartTime>8,8,-1,-1,-1,-1,</StartTime>
+    <EndTime>12,13,-1,-1,-1,-1,</EndTime>
+    <Days>1,1,0,0,0,0,</Days>
+  </Mother>
+  <Child>
+    <id>31</id>
+    <MotherID>22</MotherID>
+    <ChildName>rafi</ChildName>
+    <ChildDateOfBirth>2017-01-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>true</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Child>
+    <id>32</id>
+    <MotherID>21</MotherID>
+    <ChildName>ora</ChildName>
+    <ChildDateOfBirth>2016-01-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Child>
+    <id>33</id>
+    <MotherID>21</MotherID>
+    <ChildName>shmuel</ChildName>
+    <ChildDateOfBirth>2016-08-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Nanny>
+    <id>14</id>
+    <FirstName>ella</FirstName>
+    <LastName>smith</LastName>
+    <PhoneNumber>0</PhoneNumber>
+    <Address>beit shemesh, israel</Address>
+    <DateOfBirth>1990-01-01T00:00:00</DateOfBirth>
+    <Floor>2</Floor>
+    <Elevator>true</Elevator>
+    <MaxAgeOfKid>34</MaxAgeOfKid>
+    <MaxNumberOfKids>12</MaxNumberOfKids>
+    <MinAgeOfKid>4</MinAgeOfKid>
+    <Experience>5</Experience>
+    <PaymentPerHour>22</PaymentPerHour>
+    <AllowsPaymentByHour>true</AllowsPaymentByHour>
+    <PaymentPermonth>2000</PaymentPermonth>
+    <Vaction>true</Vaction>
+    <StartTime>8,7,-1,-1,-1,-1,</StartTime>
+    <EndTime>13,16,-1,-1,-1,-1,</EndTime>
+    <Days>1,1,0,0,0,0,</Days>
+    <Recommendations />
+  </Nanny>
+  <Contract>
+    <Motherid>21</Motherid>
+    <Nannyid>11</Nannyid>
+    <Childid>33</Childid>
+    <NumberOfContract>2</NumberOfContract>
+    <Distance>45380</Distance>
+    <HaveTheyMet>false</HaveTheyMet>
+    <IsPymentPerHour>false</IsPymentPerHour>
+    <PaymentPerHour>0</PaymentPerHour>
+    <PaymentPermonth>0</PaymentPermonth>
+    <StartOfemployment></StartOfemployment>
+    <EndOfemployment></EndOfemployment>
+    <signed>false</signed>
+    <WorkTime>4,4,0,0,0,0,</WorkTime>
+  </Contract>
+  <Contract>
+    <Motherid>22</Motherid>
+    <Nannyid>14</Nannyid>
+    <Childid>31</Childid>
+    <NumberOfContract>4</NumberOfContract>
+    <Distance>45379</Distance>
+    <HaveTheyMet>false</HaveTheyMet>
+    <IsPymentPerHour>false</IsPymentPerHour>
+    <PaymentPerHour>22</PaymentPerHour>
+    <PaymentPermonth>2000</PaymentPermonth>
+    <StartOfemployment></StartOfemployment>
+    <EndOfemployment></EndOfemployment>
+    <signed>false</signed>
+    <WorkTime>5,8,0,0,0,0,</WorkTime>
+  </Contract>
+  <Child>
+    <id>999999999</id>
+    <MotherID>21</MotherID>
+    <ChildName>david</ChildName>
+    <ChildDateOfBirth>2015-01-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Child>
+    <id>35</id>
+    <MotherID>21</MotherID>
+    <ChildName>tom</ChildName>
+    <ChildDateOfBirth>2017-01-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Child>
+    <id>36</id>
+    <MotherID>21</MotherID>
+    <ChildName>bob</ChildName>
+    <ChildDateOfBirth>2017-07-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Contract>
+    <Motherid>21</Motherid>
+    <Nannyid>11</Nannyid>
+    <Childid>36</Childid>
+    <NumberOfContract>5</NumberOfContract>
+    <Distance>0</Distance>
+    <HaveTheyMet>false</HaveTheyMet>
+    <IsPymentPerHour>false</IsPymentPerHour>
+    <PaymentPerHour>0</PaymentPerHour>
+    <PaymentPermonth>0</PaymentPermonth>
+    <StartOfemployment />
+    <EndOfemployment />
+    <signed>false</signed>
+    <WorkTime>4,4,0,0,0,0,</WorkTime>
+  </Contract>
+  <Contract>
+    <Motherid>21</Motherid>
+    <Nannyid>11</Nannyid>
+    <Childid>999999999</Childid>
+    <NumberOfContract>6</NumberOfContract>
+    <Distance>45380</Distance>
+    <HaveTheyMet>false</HaveTheyMet>
+    <IsPymentPerHour>false</IsPymentPerHour>
+    <PaymentPerHour>0</PaymentPerHour>
+    <PaymentPermonth>0</PaymentPermonth>
+    <StartOfemployment />
+    <EndOfemployment />
+    <signed>false</signed>
+    <WorkTime>4,4,0,0,0,0,</WorkTime>
+  </Contract>
+  <Mother>
+    <id>126559320</id>
+    <FirstName>Adina</FirstName>
+    <LastName>Milston</LastName>
+    <PhoneNumber>092939495</PhoneNumber>
+    <Address>alon shvut, Israel</Address>
+    <Area>15000</Area>
+    <Notes />
+    <StartTime>8,-1,-1,8,-1,-1,</StartTime>
+    <EndTime>16,-1,-1,12,-1,-1,</EndTime>
+    <Days>1,0,0,1,0,0,</Days>
+  </Mother>
+  <Child>
+    <id>216669333</id>
+    <MotherID>126559320</MotherID>
+    <ChildName>Reut</ChildName>
+    <ChildDateOfBirth>2017-01-01T00:00:00</ChildDateOfBirth>
+    <ChildSpecialNeeds>false</ChildSpecialNeeds>
+    <SpecialNeeds />
+  </Child>
+  <Nanny>
+    <id>303798110</id>
+    <FirstName>Orit</FirstName>
+    <LastName>Chalfon</LastName>
+    <PhoneNumber>523571362</PhoneNumber>
+    <Address>Nitza 8, Netanya, Israel</Address>
+    <DateOfBirth>1988-01-01T00:00:00</DateOfBirth>
+    <Floor>0</Floor>
+    <Elevator>false</Elevator>
+    <MaxAgeOfKid>24</MaxAgeOfKid>
+    <MaxNumberOfKids>2</MaxNumberOfKids>
+    <MinAgeOfKid>0</MinAgeOfKid>
+    <Experience>3</Experience>
+    <PaymentPerHour>45</PaymentPerHour>
+    <AllowsPaymentByHour>true</AllowsPaymentByHour>
+    <PaymentPermonth>1000</PaymentPermonth>
+    <Vaction>false</Vaction>
+    <StartTime>7,-1,-1,8,-1,-1,</StartTime>
+    <EndTime>17,-1,-1,17,-1,-1,</EndTime>
+    <Days>1,0,0,1,0,0,</Days>
+    <Recommendations />
+  </Nanny>
+  <Contract>
+    <Motherid>126559320</Motherid>
+    <Nannyid>303798110</Nannyid>
+    <Childid>216669333</Childid>
+    <NumberOfContract>7</NumberOfContract>
+    <Distance>101289</Distance>
+    <HaveTheyMet>false</HaveTheyMet>
+    <IsPymentPerHour>false</IsPymentPerHour>
+    <PaymentPerHour>45</PaymentPerHour>
+    <PaymentPermonth>1000</PaymentPermonth>
+    <StartOfemployment />
+    <EndOfemployment />
+    <signed>false</signed>
+    <WorkTime>9,0,0,9,0,0,</WorkTime>
+  </Contract>
+</Program>

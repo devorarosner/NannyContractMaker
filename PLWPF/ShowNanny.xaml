@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.ShowNanny"
+        mc:Ignorable="d"
+        Title="ShowNanny" Height="300" Width="800" >
+    
+    <Grid >
+
+        <DataGrid x:Name="nannyDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="nannyAddressColumn" Width="SizeToHeader" Header="Nanny Address" Binding="{Binding NannyAddress}"/>
+                <DataGridCheckBoxColumn x:Name="nannyAllowsPaymentByHourColumn" Width="SizeToHeader" Header="Nanny Allows Payment By Hour" Binding="{Binding NannyAllowsPaymentByHour}"/>
+                <DataGridTemplateColumn x:Name="nannyDateOfBirthColumn" Width="SizeToHeader" Header="Nanny Date Of Birth">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding NannyDateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="nannyFirstNameColumn" Width="SizeToHeader" Header="Nanny First Name" Binding="{Binding NannyFirstName}"/>
+                <DataGridTextColumn x:Name="nannyFloorColumn" Width="SizeToHeader" Header="Nanny Floor" Binding="{Binding NannyFloor}"/>
+                <DataGridCheckBoxColumn x:Name="nannyHaveElevatorColumn" Width="SizeToHeader" Header="Nanny Have Elevator" Binding="{Binding NannyHaveElevator}"/>
+                <DataGridTextColumn x:Name="nannyIdColumn" Width="SizeToHeader" Header="Nanny Id" Binding="{Binding NannyId}"/>
+                <DataGridTextColumn x:Name="nannyLastNameColumn" Width="SizeToHeader" Header="Nanny Last Name" Binding="{Binding NannyLastName}"/>
+                <DataGridTextColumn x:Name="nannyMaxAgeOfKid_InMonthColumn" Width="SizeToHeader" Header="Nanny Max Age Of Kid In Month" Binding="{Binding NannyMaxAgeOfKid_InMonth}"/>
+                <DataGridTextColumn x:Name="nannyMaxNumberOfKidsColumn" Width="SizeToHeader" Header="Nanny Max Number Of Kids" Binding="{Binding NannyMaxNumberOfKids}"/>
+                <DataGridTextColumn x:Name="nannyMinAgeOfKid_InMonthColumn" Width="SizeToHeader" Header="Nanny Min Age Of Kid In Month" Binding="{Binding NannyMinAgeOfKid_InMonth}"/>
+                <DataGridTextColumn x:Name="nannyNumberOfExperienceColumn" Width="SizeToHeader" Header="Nanny Number Of Experience" Binding="{Binding NannyNumberOfExperience}"/>
+                <DataGridTextColumn x:Name="nannyPaymentPerHourColumn" Width="SizeToHeader" Header="Nanny Payment Per Hour" Binding="{Binding NannyPaymentPerHour}"/>
+                <DataGridTextColumn x:Name="nannyPaymentPermonthColumn" Width="SizeToHeader" Header="Nanny Payment Permonth" Binding="{Binding NannyPaymentPermonth}"/>
+                <DataGridTextColumn x:Name="nannyPhoneNumberColumn" Width="SizeToHeader" Header="Nanny Phone Number" Binding="{Binding NannyPhoneNumber}"/>
+                <DataGridCheckBoxColumn x:Name="nannyVactionByMEducationColumn" Width="SizeToHeader" Header="Nanny Vaction By MEducation" Binding="{Binding NannyVactionByMEducation}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

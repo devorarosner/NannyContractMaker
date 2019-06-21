@@ -1,0 +1,143 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.MothersPayments"
+        mc:Ignorable="d"
+        Title="MothersPayments" Height="400" Width="300" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="176*"/>
+            <RowDefinition Height="193*"/>
+        </Grid.RowDefinitions>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="41*"/>
+                <RowDefinition Height="41*"/>
+                <RowDefinition Height="47*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="grid1"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Mother Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <ComboBox x:Name="motherIdComboBox" Grid.Column="1" DisplayMemberPath="MotherId" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="motherIdComboBox_SelectionChanged">
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel/>
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
+                </ComboBox>
+            </Grid>
+            <Grid x:Name="grid2"  Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Mother First Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="motherFirstNameTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding MotherFirstName}" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid x:Name="grid3"   Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Mother Last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <TextBlock x:Name="motherLastNameTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" Text="{Binding MotherLastName}" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <Grid  Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="71*"/>
+                <ColumnDefinition Width="75*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="43*"/>
+                </Grid.RowDefinitions>
+                <Label Content="payment for child:" HorizontalAlignment="Center" />
+                <Grid x:Name="grid4"  Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Child Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="childIdComboBox" Grid.Column="1" DisplayMemberPath="ChildId" HorizontalAlignment="Left" Height="Auto"  Margin="3,6,0,8" Grid.Row="0" VerticalAlignment="Center" Width="55" SelectionChanged="childIdComboBox_SelectionChanged">
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel/>
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                </Grid>
+                <Grid x:Name="grid5"  Grid.Row="2" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Child Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="childFirstNameTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3,8,0,9" Grid.Row="0" Text="{Binding ChildFirstName}" VerticalAlignment="Center" />
+                </Grid>
+                <Button Content="payment for child" Margin="5" Grid.Row="4" FontSize="16" Background="#FF479736" Foreground="Black"  FontFamily="david" Click="Button_Click">
+                    <Button.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=childIdComboBox, Path=Text}" Value="">
+                                    <Setter Property="Button.IsEnabled" Value="false"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label  x:Name="paymentC" HorizontalAlignment="Center" Height="27" Margin="0" Grid.Row="3" VerticalAlignment="Top" Width="141"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="102*"/>
+                    <RowDefinition Height="46*"/>
+                </Grid.RowDefinitions>
+                <Button Content="total payment"  Margin="5" Grid.Row="2" FontSize="16" Background="#FF479736" Foreground="Black"  FontFamily="david" Click="Button_Click_1">
+                    <Button.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=motherIdComboBox, Path=Text}" Value="">
+                                    <Setter Property="Button.IsEnabled" Value="false"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Content="total payment:" HorizontalAlignment="Center" />
+                <Label  x:Name="totalPayment" Margin="10" Grid.Row="1" />
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Window>

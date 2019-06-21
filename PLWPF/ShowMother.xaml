@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.ShowMother"
+        mc:Ignorable="d"
+        Title="ShowMother" Height="300" Width="725" >
+
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="259" VerticalAlignment="Top" Width="717" Margin="0,10,0,0" >
+            <DataGrid x:Name="motherDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0,-8,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="motherAddressColumn" Binding="{Binding MotherAddress}" Header="Mother Address" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherFirstNameColumn" Binding="{Binding MotherFirstName}" Header="Mother First Name" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherIdColumn" Binding="{Binding MotherId}" Header="Mother Id" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherLastNameColumn" Binding="{Binding MotherLastName}" Header="Mother Last Name" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherNannyInAreaColumn" Binding="{Binding MotherNannyInArea}" Header="Mother Nanny In Area" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherNotesColumn" Binding="{Binding MotherNotes}" Header="Mother Notes" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="motherPhoneNumberColumn" Binding="{Binding MotherPhoneNumber}" Header="Mother Phone Number" Width="SizeToHeader"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>

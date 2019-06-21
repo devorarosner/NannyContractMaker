@@ -1,0 +1,161 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.AddNanny"
+        mc:Ignorable="d"
+        Title="AddNanny" Height="900" Width="450" >
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="black"/>
+            <Setter Property="FontFamily" Value="david"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="561*"/>
+            <RowDefinition Height="266*"/>
+        </Grid.RowDefinitions>
+      
+        <Grid x:Name="grid1"   Margin="0,0,0,0" Grid.Row="1"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Nanny Address:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyAddressTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding NannyAddress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Allows Payment By Hour:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <CheckBox x:Name="nannyAllowsPaymentByHourCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding NannyAllowsPaymentByHour, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <Label Content="Nanny Date Of Birth:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <DatePicker x:Name="nannyDateOfBirthDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="2" SelectedDate="{Binding NannyDateOfBirth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
+            <Label Content="Nanny First Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyFirstNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding NannyFirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Floor:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyFloorTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding NannyFloor, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Have Elevator:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <CheckBox x:Name="nannyHaveElevatorCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding NannyHaveElevator, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <Label Content="Nanny Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyIdTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="6" Text="{Binding NannyId, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyLastNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="7" Text="{Binding NannyLastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Max Age Of Kid In Month:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="8" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyMaxAgeOfKid_InMonthTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="8" Text="{Binding NannyMaxAgeOfKid_InMonth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Max Number Of Kids:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="9" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyMaxNumberOfKidsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="9" Text="{Binding NannyMaxNumberOfKids, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Min Age Of Kid In Month:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="10" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyMinAgeOfKid_InMonthTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="10" Text="{Binding NannyMinAgeOfKid_InMonth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Number Of Experience:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="11" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyNumberOfExperienceTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="11" Text="{Binding NannyNumberOfExperience, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Payment Per Hour:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="12" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyPaymentPerHourTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="12" Text="{Binding NannyPaymentPerHour, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Payment Permonth:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="13" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyPaymentPermonthTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="13" Text="{Binding NannyPaymentPermonth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Phone Number:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="14" VerticalAlignment="Center"/>
+            <TextBox x:Name="nannyPhoneNumberTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="14" Text="{Binding NannyPhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Nanny Vaction By MEducation:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="15" VerticalAlignment="Center"/>
+            <CheckBox x:Name="nannyVactionByMEducationCheckBox" Content="" Grid.Column="1" HorizontalAlignment="Left" IsChecked="{Binding NannyVactionByMEducation, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="15" VerticalAlignment="Center"/>
+
+        </Grid>
+        <Grid   Grid.Row="2" Margin="0"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*"/>
+                <RowDefinition Height="166*"/>
+                <RowDefinition Height="63*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Margin="0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="57*"/>
+                    <ColumnDefinition Width="56*"/>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="72*"/>
+                    <ColumnDefinition Width="61*"/>
+                    <ColumnDefinition Width="55*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Sunday" Grid.Column="1" />
+                <Label Content="Munday" Grid.Column="2" />
+                <Label Content="Tuesday" Grid.Column="3"/>
+                <Label Content="Wednesday" Grid.Column="4" />
+                <Label Content="Thursday" Grid.Column="5" />
+                <Label Content="Friday" Grid.Column="6"   />
+                <CheckBox x:Name="day1" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center" Grid.Column="1"/>
+                <CheckBox x:Name="day2" Grid.Column="2" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center"/>
+                <CheckBox x:Name="day3" Grid.Column="3" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center"/>
+                <CheckBox x:Name="day4" Grid.Column="4" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center"/>
+                <CheckBox x:Name="day5" Grid.Column="5" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center"/>
+                <CheckBox x:Name="day6" Grid.Column="6" HorizontalAlignment="center" Margin="15,10,15,10" Grid.Row="1" VerticalAlignment="center"/>
+                <TextBox x:Name="daystart1" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"   Grid.Column="1" IsEnabled="{Binding IsChecked, ElementName=day1}"/>
+                <TextBox x:Name="daystart2" Grid.Column="2" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"  IsEnabled="{Binding IsChecked, ElementName=day2}"/>
+                <TextBox x:Name="daystart3" Grid.Column="3" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day3}"/>
+                <TextBox x:Name="daystart4" Grid.Column="4"  Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"  IsEnabled="{Binding IsChecked, ElementName=day4}"/>
+                <TextBox x:Name="daystart5" Grid.Column="5"  Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"  IsEnabled="{Binding IsChecked, ElementName=day5}"/>
+                <TextBox x:Name="daystart6" Grid.Column="6"  Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day6}"/>
+                <TextBox x:Name="dayend1" Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"  Grid.Column="1"  IsEnabled="{Binding IsChecked, ElementName=day1}"/>
+                <TextBox x:Name="dayend2" Grid.Column="2"  Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day2}"/>
+                <TextBox x:Name="dayend3" Grid.Column="3" Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day3}"/>
+                <TextBox x:Name="dayend4" Grid.Column="4"  Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"  IsEnabled="{Binding IsChecked, ElementName=day4}"/>
+                <TextBox x:Name="dayend5" Grid.Column="5"  Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day5}"/>
+                <TextBox x:Name="dayend6" Grid.Column="6"  Margin="0,10,0,0" Grid.Row="3" TextWrapping="Wrap"   IsEnabled="{Binding IsChecked, ElementName=day6}"/>
+                <Label Content="start:" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="33" Grid.RowSpan="2"/>
+                <Label Content="end:" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="40" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Label Content="Enter the days and times nanny works on:" HorizontalAlignment="center"  Margin="44,0" VerticalAlignment="Top" Height="29" Width="304" />
+            <Button Content="Add Nanny" Margin="10" Grid.Row="2" Click="Button_Click" FontSize="16" Background="#FF479736" Foreground="Black"  FontFamily="david">
+                <Button.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=nannyIdTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=nannyAddressTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=nannyMaxAgeOfKid_InMonthTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=nannyMaxNumberOfKidsTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=nannyMinAgeOfKid_InMonthTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=nannyPaymentPermonthTextBox, Path=Text}" Value="">
+                                <Setter Property="Button.IsEnabled" Value="false"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+        <Label Content="Add Nanny:" HorizontalAlignment="center"  Margin="5" VerticalAlignment="Top" />
+    </Grid>
+</Window>
